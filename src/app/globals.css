@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Bebas+Neue&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ponomar&family=Pochaevsk&display=swap');
+
+/* ─── TOKENS ───────────────────────────────────────
+   Совпадают с komi.world — карта должна читаться как
+   часть того же сайта, а не как отдельный проект. */
+:root {
+  --font-display: "Ponomar", "Pochaevsk", serif;
+  --font-bold: "Bebas Neue", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+
+  --accent: #3864db;
+
+  --bg: #fafaf8;
+  --bg-soft: #f2f2ee;
+
+  --text: #4a4a4a;
+  --text-secondary: #666666;
+  --text-light: #8f8f8f;
+
+  --border: rgba(17,17,17,.08);
+
+  /* Карта */
+  --map-fill: #e6e6e0;
+  --map-fill-hover: #d2d2c8;
+  --map-fill-empty: #eeeeea;
+  --map-stroke: #fafaf8;
+}
+
+/* ─── RESET ────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+button { border: none; outline: none; cursor: pointer; font: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

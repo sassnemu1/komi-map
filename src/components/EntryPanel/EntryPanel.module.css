@@ -1,0 +1,209 @@
+.panel {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  box-shadow: 0 10px 40px rgba(17, 17, 17, .06);
+  scrollbar-width: thin;
+}
+
+.head {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px 22px 14px;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.headText { display: flex; flex-direction: column; gap: 4px; }
+
+.type {
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+.districtName {
+  font-family: var(--font-bold);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: .01em;
+  color: var(--text);
+}
+
+.back, .close {
+  background: none;
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+  transition: color .2s ease;
+}
+
+.back { font-size: 14px; padding: 4px 0; text-align: left; }
+.back:hover { color: var(--accent); }
+
+.close { font-size: 15px; line-height: 1; padding: 5px; flex-shrink: 0; }
+.close:hover { color: var(--text); }
+
+/* ─── Список ────────────────────────────────────── */
+.list { display: flex; flex-direction: column; }
+
+.empty {
+  padding: 26px 22px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 18px 22px;
+  background: none;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  transition: background .2s ease;
+}
+
+.card:last-child { border-bottom: none; }
+.card:hover { background: var(--bg-soft); }
+
+.cardGenre {
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--g, var(--accent));
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 23px;
+  line-height: 1.15;
+  color: var(--text);
+}
+
+.cardKomi {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--text-light);
+}
+
+.cardLead {
+  margin-top: 3px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.cardMore {
+  margin-top: 6px;
+  font-size: 12px;
+  letter-spacing: .04em;
+  color: var(--accent);
+}
+
+/* ─── Развёрнутая запись ────────────────────────── */
+.article { padding: 22px 22px 30px; }
+
+.articleGenre {
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--g, var(--accent));
+}
+
+.articleTitle {
+  margin-top: 8px;
+  font-family: var(--font-display);
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.08;
+  color: var(--text);
+}
+
+.articleKomi {
+  margin-top: 5px;
+  font-size: 13.5px;
+  font-style: italic;
+  color: var(--text-light);
+}
+
+.meta {
+  display: flex;
+  gap: 26px;
+  margin: 18px 0 22px;
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.meta dt {
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 3px;
+}
+
+.meta dd { font-size: 13.5px; color: var(--text); }
+
+.para {
+  margin-bottom: 14px;
+  font-size: 15px;
+  line-height: 1.68;
+  color: var(--text);
+}
+
+.para:last-of-type { margin-bottom: 0; }
+
+.sources {
+  margin-top: 26px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.sourcesLabel {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+.sources ul { list-style: none; }
+
+.sources li {
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.reviewNote {
+  margin-top: 10px;
+  padding: 9px 11px;
+  background: var(--bg-soft);
+  border-left: 2px solid var(--text-light);
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--text-light);
+}
+
+@media (max-width: 980px) {
+  .panel {
+    position: static;
+    max-height: none;
+  }
+  .articleTitle { font-size: 32px; }
+}
