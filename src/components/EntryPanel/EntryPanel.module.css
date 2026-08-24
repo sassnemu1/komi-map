@@ -207,3 +207,14 @@
   }
   .articleTitle { font-size: 32px; }
 }
+
+.permalink {
+  display: inline-block;
+  margin: 18px 22px 24px;
+  font-size: 12.5px;
+  letter-spacing: .04em;
+  color: var(--accent);
+  transition: opacity .2s ease;
+}
+
+.permalink:hover { opacity: .7; }

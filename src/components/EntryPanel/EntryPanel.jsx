@@ -98,6 +98,10 @@ export default function EntryPanel({ district, entries, entry, onPick, onBack, o
             </p>
           ))}
 
+          <a className={styles.permalink} href={`/entry/${entry.id}`}>
+            Постоянная ссылка на сюжет →
+          </a>
+
           {entry.sources?.length > 0 && (
             <footer className={styles.sources}>
               <span className={styles.sourcesLabel}>Источники</span>
