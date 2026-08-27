@@ -61,7 +61,6 @@ export default function FolkloreMap({ selected, onSelect, activeGenre }) {
           path.setAttribute("data-district", info.name);
           path.setAttribute("data-count", String(entries.length));
           if (entries.length === 0) path.setAttribute("data-empty", "true");
-          path.classList.add(styles.district);
 
           // Флаг района заливкой — тот же приём, что на komi.world:
           // pattern по bbox фигуры с cover-кадрированием.
