@@ -112,7 +112,9 @@ export default function EntryPanel({ district, entries, entry, onPick, onBack, o
               </ul>
               {entry.verified === "review" && (
                 <p className={styles.reviewNote}>
-                  Привязка сюжета к району требует сверки с первоисточником.
+                  {entry.areaWide
+                    ? "Трактовка сюжета требует сверки с первоисточником."
+                    : "Привязка сюжета к району требует сверки с первоисточником."}
                 </p>
               )}
             </footer>

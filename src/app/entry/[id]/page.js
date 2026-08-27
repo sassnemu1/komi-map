@@ -118,7 +118,9 @@ export default async function EntryPage({ params }) {
             </ul>
             {entry.verified === "review" && (
               <p className={styles.reviewNote}>
-                Привязка сюжета к району требует сверки с первоисточником.
+                {entry.areaWide
+                  ? "Трактовка сюжета требует сверки с первоисточником."
+                  : "Привязка сюжета к району требует сверки с первоисточником."}
               </p>
             )}
           </footer>
